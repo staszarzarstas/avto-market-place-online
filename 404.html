@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>Перенаправление...</title>
     <script>
+      // Получаем текущий путь
       const path = window.location.pathname;
-      window.location.href = '/avto-market-place-online/#' + path;
+      // Удаляем префикс /avto-market-place-online/ если он есть
+      const cleanPath = path.replace('/avto-market-place-online/', '');
+      // Перенаправляем на главную страницу
+      window.location.href = '/avto-market-place-online/#' + cleanPath;
     </script>
   </head>
   <body>

@@ -21,5 +21,8 @@ export default defineConfig({
         drop_debugger: true
       }
     }
+  },
+  define: {
+    'process.env.BASE_URL': JSON.stringify('/avto-market-place-online/')
   }
 });
