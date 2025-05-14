@@ -30,8 +30,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install
-          npm install @vitejs/plugin-react --save-dev
+          npm install --legacy-peer-deps
+          npm install @vitejs/plugin-react --save-dev --legacy-peer-deps
 
       - name: Build
         run: npm run build
