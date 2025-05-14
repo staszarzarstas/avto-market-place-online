@@ -5,10 +5,6 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/avto-market-place-online/',
-  server: {
-    host: "::",
-    port: 8080,
-  },
   plugins: [react()],
   resolve: {
     alias: {
@@ -16,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
     terserOptions: {
@@ -23,17 +20,6 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true
       }
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'cmdk': ['cmdk']
-        }
-      }
     }
-  },
-  define: {
-    'process.env.BASE_URL': JSON.stringify('/avto-market-place-online/')
-  },
-  publicDir: 'public'
+  }
 });
