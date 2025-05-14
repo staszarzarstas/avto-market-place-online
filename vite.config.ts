@@ -23,6 +23,14 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true
       }
+    },
+    rollupOptions: {
+      external: ['cmdk'],
+      output: {
+        globals: {
+          cmdk: 'cmdk'
+        }
+      }
     }
   }
 });
