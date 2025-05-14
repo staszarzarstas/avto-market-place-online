@@ -34,5 +34,6 @@ export default defineConfig({
   },
   define: {
     'process.env.BASE_URL': JSON.stringify('/avto-market-place-online/')
-  }
+  },
+  publicDir: 'public'
 });

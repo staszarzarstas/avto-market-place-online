@@ -4,10 +4,26 @@
     <meta charset="utf-8">
     <title>Перенаправление...</title>
     <script>
-      // Получаем текущий путь
+      // Получаем текущий путь и хэш
       const path = window.location.pathname;
-      // Перенаправляем на главную страницу с сохранением пути
-      window.location.href = '/avto-market-place-online/#' + path;
+      const hash = window.location.hash;
+      const search = window.location.search;
+      
+      // Формируем новый URL
+      let newUrl = '/avto-market-place-online/';
+      
+      // Добавляем хэш, если он есть
+      if (hash) {
+        newUrl += hash;
+      }
+      
+      // Добавляем поисковые параметры, если они есть
+      if (search) {
+        newUrl += search;
+      }
+      
+      // Перенаправляем
+      window.location.replace(newUrl);
     </script>
   </head>
   <body>
