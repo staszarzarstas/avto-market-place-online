@@ -25,10 +25,9 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['cmdk'],
       output: {
-        globals: {
-          cmdk: 'cmdk'
+        manualChunks: {
+          'cmdk': ['cmdk']
         }
       }
     }
