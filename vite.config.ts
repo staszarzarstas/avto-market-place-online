@@ -4,7 +4,6 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/avto-market-place-online/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -21,8 +20,5 @@ export default defineConfig({
         drop_debugger: true
       }
     }
-  },
-  define: {
-    'process.env.BASE_URL': JSON.stringify('/avto-market-place-online')
   }
 });
